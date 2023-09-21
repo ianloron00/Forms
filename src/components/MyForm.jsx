@@ -5,9 +5,15 @@ const MyForm = () => {
   const [name, setName] = useState()
   const [email, setEmail] = useState()
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Enviando formulário...")
+    console.log(name, email)
+  }
+
   return(
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome: </label>
           <input type="text" name="name"
