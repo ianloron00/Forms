@@ -4,13 +4,15 @@ import {useState} from 'react'
 const MyForm = ({ user }) => {
   const [name, setName] = useState(user ? user.name : '')
   const [email, setEmail] = useState(user ? user.email : '')
+  const [bio, setBio] = useState(user ? user.bio : '')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log("Enviando formulário...")
-    console.log(name, email)
+    console.log(name, email, bio)
     setName('')
     setEmail('')
+    setBio('')
   }
 
   return(
@@ -31,6 +33,11 @@ const MyForm = ({ user }) => {
             onChange={(e) => setEmail(e.target.value)}
             value={email} />
         </label>
+        <label>Bio: </label>
+        <textarea name="bio"
+        placeholder="Descrição do usuário"
+        onChange={(e) => setBio(e.target.name)}
+        value={bio} />
         <input type="submit" value="enviar" />
       </form>
     </div>
