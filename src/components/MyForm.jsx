@@ -9,6 +9,8 @@ const MyForm = ({ user }) => {
     e.preventDefault()
     console.log("Enviando formulário...")
     console.log(name, email)
+    setName('')
+    setEmail('')
   }
 
   return(
