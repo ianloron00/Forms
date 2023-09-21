@@ -1,11 +1,11 @@
 import './App.css'
-import MyForms from './components/MyForm'
+import MyForm from './components/MyForm'
 
 function App() {
   return (
     <>
       <h2>Forms</h2>
-      <MyForms />
+      <MyForm user={{ name: "josué", email: "j1234@penguin.org" }}/>
     </>
   )
 }
